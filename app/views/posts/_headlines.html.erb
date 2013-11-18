@@ -1,0 +1,27 @@
+<nav role="navigation" id="sidebar">
+  <div class="circular"></div>
+
+  <blockquote>&#8220;I&#8217;m passionate about all things data, especially Microsoft&#8217;s SQL Server, and have been developing and supporting databases since SQL 2000.&#8221;</blockquote>
+
+  <h2>Recent Posts</h2>
+  <ul>
+    <% @headlines.each do |post| %>
+      <li><%= link_to post.headline, post %></li>
+    <% end %>
+  </ul>
+  <h2>Get Social</h2>
+  <p class="center">
+    <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+    <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+    <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+    <a href="#"><i class="fa fa-youtube-square fa-2x"></i></a>
+    <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+  </p>
+
+  <h2>Latest Tweets</h2>
+  <div class="center">
+    /* * * PASTE TWITTER WIDGET CODE BELOW * * */
+
+    /* * * PASTE TWITTER WIDGET CODE ABOVE * * */
+ </div>
+</nav>

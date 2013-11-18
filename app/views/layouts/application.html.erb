@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>My Bare Bones Blog - <%= yield :title %></title>
+  <meta name="description" content="<%= yield :intro %>">
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+   <script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "58958c8e-3b29-46af-a2da-87d774a4579a", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+  </head>
+  <body>
+
+    <div id="content">
+      <header role="banner" id="logo">
+        <h1><%= link_to 'My Bare Bones Blog', root_path %></h1>
+        <h2>by Jackie Johnston</h2>
+      </header>
+      <div id="container">
+
+        <%= yield %>
+
+    <div class="clear">Copyright &copy;<%= Time.now.strftime("%Y") %>. All rights reserved.<br>A Ruby on Rails Website by <a href="http://www.jackiejohnston.us">Jackie Johnston</a></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'foobar'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+  </body>
+</html>

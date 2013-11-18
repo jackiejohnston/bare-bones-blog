@@ -1,0 +1,22 @@
+<% content_for :title do %>Admin Posts<% end %>
+
+<article role="main" id="post">
+
+<% @posts.each do |post| %>
+  
+    <h1 class="title"><%= link_to post.headline, post %></h1>
+    <h3 class="date"><%= post.created_at.strftime("%B %e, %Y")  %></h3>
+    <%= markdown post.intro %>
+
+  <p><%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  
+
+<% end %>
+
+<%= will_paginate @posts %>
+
+<p><%= link_to 'New Post', new_post_path %></p>
+
+</article>
+
+<%= render "headlines" %>

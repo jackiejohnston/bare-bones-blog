@@ -1,0 +1,8 @@
+<%= simple_form_for(@post) do |f| %>
+<%= f.error_notification %>
+<%= f.input :headline %>
+<%= f.input :intro, hint: "Used for description META tag, try to keep to under 160 characters." %>
+<%= f.input :article %>
+<%= f.error :base %>
+<%= f.button :submit %>
+<% end %>
