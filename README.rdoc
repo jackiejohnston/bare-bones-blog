@@ -3,25 +3,29 @@
 Run these commands to try it out.
 
 ```
-$ bundle
-$ cp config/application.example.yml config/application.yml
-$ rake db:setup
-$ rails s
+    $ bundle
+    $ cp config/application.example.yml config/application.yml
+    $ rake db:setup
+    $ rails s
 ```
  
-#### Add Disqus
+####Add Disqus
+
  Change the `disqus_shortname` on the `app/views/layouts/application.html.erb`, `app/views/layouts/show.html.erb` and `app/views/layouts/index.html.erb` files.
 
-#### Add background images
+####Add background images
+
 Either use image URLs already on the web or add photos to your `public` folder and change the necessary URLs from the `example.com` ones in the `app/assets/stylesheets/stylesheet.css` file.
 
-#### Change Gravatar image
+####Change Gravatar image
+
 On line 62 of the `app/assets/stylesheets/stylesheet.css` file, change the image file. Use [Gravatar URL Generator][1].
 
-#### Customize
-The following files have info you can customize such as title tag, footer, headlines, social media links, Twitter widget code, etc.: `app/views/layouts/application.html.erb`, `app/views/layouts/show.html.erb`, `/app/views/posts/_headlines.html.erb` and `app/views/layouts/index.html.erb` files
+####Customize
 
- Created with Rails 4.0.0 and Ruby 2.0.0.
+The following files have info you can customize such as title tag, footer, headlines, etc.: `app/views/layouts/application.html.erb`, `app/views/layouts/show.html.erb` and `app/views/layouts/index.html.erb` files
+
+Created with Rails 4.0.0 and Ruby 2.0.0.
 
 
   [1]: http://asaph.org/gravatar/
